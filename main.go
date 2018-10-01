@@ -7,6 +7,7 @@ func main() {
 	r.GET("/", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "test application for jenkins + kubernetes setup",
+			"step_2":  "ci/cd test #2",
 		})
 	})
 
