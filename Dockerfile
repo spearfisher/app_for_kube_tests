@@ -13,6 +13,6 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /go/bin/main
 # start from scratch
 FROM scratch
 # Copy our static executable
-COPY --from=builder /go/bin/main app
-EXPOSE 3333
-CMD ["/app"]
+COPY --from=builder /go/bin/main /app
+# EXPOSE 3333
+CMD app
